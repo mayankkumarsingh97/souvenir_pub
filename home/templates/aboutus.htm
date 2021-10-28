@@ -1,0 +1,638 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+   <meta name="description" content="Souvenir Publishers. Leading educational publishers in India.">
+   <meta charset="UTF-8">
+   <meta name="description" content="Corona Virus Outbreak">
+   <meta name="keywords" content="Souvenir Publishers, Education, Corona Virus, Corona, Prevention, Health">
+   <meta name="author" content="Vasu Kapoor">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="apple-touch-icon" sizes="76x76" href="{% static 'new-logo-sove.png' %}">
+   <link rel="icon" type="image/png" href="{% static 'new-logo-sove.png' %}">
+ <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+ <title></title>
+
+ <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/starter-template/">
+
+ <link href="https://fonts.cdnfonts.com/css/playtime" rel="stylesheet">
+ <link href="https://fonts.cdnfonts.com/css/graffiare" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js">
+ <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+ <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+<link href="{% static 'css/starter-template.css' %}" rel="stylesheet">
+<link href="../PlaytimeWithHotToddies3D.ttf" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   <style>
+          @font-face {
+  font-family: Playtime;
+  src: url(Playtime.otf);
+
+}
+   </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container ">
+      <a class="navbar-brand" href="#"><img width="100px" src="{% static 'new-logo-sove.png' %}" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0 fontSt">
+          <li class="nav-item pt-lg-4">
+            <a class="nav-link active " aria-current="page" href="{% url 'home:homepage' %}">Home</a>
+          </li>
+          <li class="nav-item pt-lg-4 px-md-2">
+            <a href="{% url 'home:aboutus' %}" class="nav-link">About us</a>
+          </li>
+           <li class="nav-item pt-lg-4 px-md-2">
+            <a class="nav-link" target="blank" href="https://smartlearnerindia.com/">Online Supports</a>
+          </li>
+          <li class="nav-item pt-lg-4">
+            {% for item in abc %}
+            <a class="nav-link" target="blank" href="{{item.file.url}}">Catalogue</a>
+            {% endfor %}
+
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" target="blank" href="https://shop.souvenirpublisher.com/"><img class="img-fluid" src="{% static 'shop-noe.png' %}" alt=""></a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+    <!-- ---------------------------------------------------------------------------------------------
+-- ________________________------------About Us---------------______________________________ --
+---------------------------------------------------------------------------------------------- -->
+
+<!-- <script>
+  document.querySelector('#abt_us').scrollIntoView({
+  behavior: 'smooth'
+});
+</script> -->
+
+
+<div  id="abt_us" class="container mt-md-5">
+
+    <div  class="row  rounded-4">
+      <div class="col-md-5">
+        <div class="">
+          <h2 style="font-size: 4rem;" class="text-center fontPT">About Us</h2>
+          <p class="para text-center">Meet the amazing team behind this company and
+            find out more about how we work.</p>
+
+
+
+        </div>
+
+      </div>
+      <div class="col-md-7">
+
+         <img src="{% static 'abt/Banner.png' %}" class="img-fluid" alt="">
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="container mt-md-5">
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="h-100 text-dark rounded-3">
+          <h2 class="text-center fontPT">Value in Heritage</h2>
+          <p class="para text-center">Our greatest strength is our heritage.
+            Our roots are robust and our pillars strong.</p>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="container">
+    <div class="row d-flex flex-column flex-md-row align-items-center pb-3 mb-4">
+     <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+       <div class="col-md-4">
+
+         <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"></svg> -->
+
+         <img src="{% static 'abt/1.png' %}" alt="">
+         <div class="">
+           <div class="">
+
+            <h4 class="text-uppercase">Backed by a
+              strong team</h4>
+               <p class="para">
+                We have a strong backend team
+                that ensures we always have
+                 the best products in the market.
+                 </p>
+
+           </div>
+         </div>
+
+
+       </div>
+
+
+
+       <div class="col-md-4">
+
+         <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"></svg> -->
+
+         <img src=" {% static 'abt/2.png' %}" alt="">
+         <div class="">
+           <div class="">
+
+             <h4 class="text-uppercase">In-house
+              IT team</h4>
+               <p class="para">A Dedicated Souvenir funded startup that ensures innovation round the clock.</p>
+
+           </div>
+         </div>
+
+
+       </div>
+
+
+       <div class="col-md-4">
+
+         <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title></svg> -->
+
+         <img src=" {% static 'abt/3.png' %}" alt="">
+
+         <div class="">
+           <div class="">
+             <!-- <img src="../3.png" alt=""> -->
+                <h4 class="text-uppercase">Teacher Satisfaction
+                  at the heart of
+                  company policies</h4>
+               <p class="para">We, at Souvenir believe thet the teacher is the focal point of our industry and we strive to make their job easier.</p>
+
+           </div>
+         </div>
+
+
+       </div>
+
+
+     </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="row mt-md-5">
+      <div class="col-md-12">
+        <div class="h-100 text-dark">
+          <h2 class=" text-center fontPT">What makes us special ?</h2>
+          <p class="para text-center">Our greatest strength is our heritage.
+            Our roots are robust and our pillars strong.</p>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="container">
+    <div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card fontPT border-white">
+            <img class="card-img-top img-fluid" src=" {% static 'abt/25.png' %}" alt="Card image">
+            <div class="card-img-overlay pt-md-5">
+              <h1 class="card-title text-white text-center my-0">BEST IN</h1>
+              <h1 class="card-title text-white text-center my-0">CLASS</h1>
+              <h1 class="card-title text-white text-center my-0">PRODUCTS</h1>
+
+              <h5 class="card-title text-white text-center fs-6  px-md-5 para pb-3">OUR PRODUCTS ARE CAREFULLY DESIGNED AFTER A DELIGINCE AND SEGMENT ANALYSIS.</h5>
+              <!-- <img src="../shop-noe.png" alt=""> -->
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-7">
+
+
+  <div style="display: flex;">
+    <div class="pt-md-3 mr-md-3 mt-lg-2"><img class="" src=" {% static 'abt/18.png' %}" alt=""></div> <h1 style="color:green"  class="lh-1 mb-3 pt-lg-3  text-center fontPT fs-3 text-uppercase">e-Learning tools that
+      focus on the teacher</h1>
+  </div>
+           <p class="para text-center mx-md-5">We understand that the teacher is the most
+            important part of the education system and all our tools are made with this in mind.</p>
+            <div style="display: flex;">
+              <div class="pt-md-3 mr-md-3 mt-md-2"><img class="" src=" {% static 'abt/19.png' %}" alt=""></div> <h1 style="color:blue"  class="lh-1 mb-3 pt-lg-3  text-center fontPT fs-3 text-uppercase">It's esay to get in touch with us.</h1>
+            </div>
+              <p class="para px-md-5 text-center">Getting in touch with us has never been easier. We have a
+                Contact Us tab in all our products.</p>
+                <div style="display: flex;">
+                  <div class="pt-md-3 mr-md-3 mt-md-2"><img class="" src=" {% static 'abt/20.png' %}" alt=""></div> <h1 style="color:lightblue"  class="lh-1 mb-3 pt-lg-3  text-center fontPT fs-3 text-uppercase">Prompt service at the fore of our operations.</h1>
+                </div>
+                  <p class="para px-md-5 text-center">We believe in the value of time. We ensure timely deleveries and assure you
+                    are always working round the clock to fulfill our promises.
+                  </p>
+
+
+
+
+
+        </div>
+  </div>
+    </div>
+
+  </div>
+
+
+  <div class="container mt-md-5">
+    <div>
+      <div class="row">
+
+
+        <div class="col-md-8">
+        <div style="display: flex;">
+    <div class=" mr-md-3 mt-md-2"><img class="" src=" {% static 'abt/21.png' %}" alt=""></div> <h1 style="color:green"  class="lh-1 mb-3 pt-lg-3  text-center fontPT fs-3 text-uppercase">Hand picked team
+  </h1>
+  </div>
+           <p class="para text-center px-md-5">We understand that the teacher is the most
+            important part of the education system and all our tools are made with this in mind.</p>
+            <div style="display: flex;">
+              <div class="pt-md-3 mr-md-3 mt-md-2"><img class="" src=" {% static 'abt/22.png' %}" alt=""></div> <h1 style="color:blue"  class="lh-1 mb-3 pt-lg-3  text-center fontPT fs-3 text-uppercase">It's esay to get in touch with us.</h1>
+            </div>
+              <p class="para px-lg-5 text-center">Getting in touch with us has never been easier. We have a
+                Contact Us tab in all our products.</p>
+                <div style="display: flex;">
+                  <div class="pt-md-3 mr-md-3 mt-lg-2"><img class="" src=" {% static 'abt/23.png' %}" alt=""></div> <h1 style="color:lightblue"  class="lh-1 mb-3 pt-lg-3  text-center fontPT fs-3 text-uppercase">Prompt service at the fore of our operations.</h1>
+                </div>
+                  <p class="para px-md-5 text-center">We believe in the value of time. We ensure timely deleveries and assure you
+                    are always working round the clock to fulfill our promises.
+                  </p>
+
+
+
+
+
+        </div>
+        <div class="col-md-4">
+          <div class="card fontPT  border-white">
+            <img class="card-img-top  img-fluid" src=" {% static 'abt/24.png' %}" alt="Card image">
+            <div class="card-img-overlay">
+              <h1 class="card-title text-white text-center my-0">WE</h1>
+              <h1 class="card-title text-white text-center my-0">DEVELOP</h1>
+              <h1 class="card-title text-white text-center my-0">EVERY </h1>
+              <h1 class="card-title text-white text-center my-0">THING IN</h1>
+              <h1 class="card-title text-white text-center my-0">HOUSE</h1>
+              <h5 class="card-title text-white text-center fs-6  px-lg-5 para pb-3">SMART MEDIA IS A IT SOLUTION BASED STARTUP FOUNDED BY SOUVENIER PUBLISHERS.</h5>
+              <!-- <img src="../shop-noe.png" alt=""> -->
+
+
+            </div>
+          </div>
+         </div>
+  </div>
+    </div>
+
+  </div>
+
+
+  <div class="container mt-5">
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="h-100 text-dark">
+          <h2 class="text-center fontPT">Under Our Umbrella</h2>
+          <p class="para text-center">Brands that come under Souvenir.</p>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="container">
+       <div class="row">
+         <div class="col-md-3">
+            <img class="img-fluid" src=" {% static 'abt/4.png' %}" alt="">
+            <h2 class="text-center">Red Dot  Singapore</h2>
+            <h4 class="text-center">Book Publishing (Singapore)</h4>
+            <p class="text-center">Keep your face always toward the sunshine - and shadows will fall behind you...</p>
+         </div>
+         <div class="col-md-3">
+          <img class="img-fluid mx-auto" src=" {% static 'abt/6.png' %}" alt="">
+          <h2 class="text-center">Red Dot Nigeria</h2>
+          <h4 class="text-center">Book Publishing (Nigeria)</h4>
+          <p class="text-center">Keep your face always toward the sunshine - and shadows will fall behind you...</p>
+        </div>
+        <div class="col-md-3">
+          <img class="img-fluid" src=" {% static 'abt/5.png' %}" alt="">
+          <h2 class="text-center">Lifeskills</h2>
+          <h4 class="text-center">Book Publishing</h4>
+          <p class="text-center">There is only one corner of the universe you can be certain of improving, and that's your own self...</p>
+        </div>
+        <div class="col-md-3">
+          <img class="img-fluid" src=" {% static 'abt/7.png' %}" alt="">
+          <h2 class="text-center">Dhruv
+            Enterprises</h2>
+            <h4 class="text-center">Book Publishing</h4>
+            <p class="text-center">Think in the morning. Act in the noon. Eat in the evening. Sleep in the night......</p>
+        </div>
+       </div>
+  </div>
+
+
+
+
+
+
+  <!-- -------------------------------------------------------------------------------------
+  -------------------------------------------------------------------------------------
+                            EVENTS AND AWARDS
+  ------------------------------------------------------------------------------------
+  ------------------------------------------------------------------------------------                           -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 fontPT text-center">EVENTS AND AWARDS</div>
+    </div>
+    <div class="row">
+     <div class="row">
+       <div class="col-md-4">
+
+         <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+
+
+         <div class="card border-white">
+
+
+             <img src="{% static 'abt/10.png' %}" class="img-fluid" alt="img 10.png">
+             <p class="para fs-6 text-center">Best Book Production Award given by
+                Shri Pravesh Saheb Singh Verma
+                (Member of Parliament Delhi) - 2019</p>
+
+
+         </div>
+
+
+       </div>
+
+
+
+       <div class="col-md-4">
+
+         <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+
+
+         <div class="card border-white">
+
+
+            <img src="{% static 'abt/12.png' %}"  class ="img-fluid" alt="img 12.png">
+            <p class="para fs-6 text-center"> Best Book Production Award by
+                HRD Minister (Education)
+                Dr M N Pandey - 2016</p>
+
+
+         </div>
+
+
+       </div>
+
+
+       <div class="col-md-4">
+
+         <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+
+
+         <div class="card border-white">
+
+
+            <img src="{% static 'abt/15.png' %}"  class ="img-fluid" alt="img 7.png">
+            <p class="para fs-6 text-center">Ghana Meet</p>
+
+
+
+         </div>
+
+
+       </div>
+
+
+     </div>
+    </div>
+
+    <div class="row">
+      <div class="row">
+        <div class="col-md-4">
+
+           <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>  -->
+
+
+          <div class="card border-white">
+
+
+              <img src="{% static 'abt/14.png' %}"  class ="img-fluid" alt="img 15.png">
+              <p class="para fs-6 text-center">Young Publishers Award of the year 2001 by GOVERNOR OF DELHI Mr. Vijay Kapoor, Sh. Ashok Ganguly (CBSE Chairman)</p>
+
+
+          </div>
+
+
+        </div>
+
+
+
+        <div class="col-md-4">
+
+          <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+
+
+          <div class="card border-white">
+
+
+             <img src="{% static 'abt/16.png' %}"   class ="img-fluid" alt="img 6.png">
+             <p class="para fs-6 text-center">Lagos Book Fair - (Nigeria)</p>
+
+
+          </div>
+
+
+        </div>
+
+
+        <div class="col-md-4">
+
+          <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+
+
+          <div class="card border-white">
+
+
+             <img src="{% static 'abt/17.png' %}"   class ="img-fluid" alt="img 7.png">
+             <p class="para fs-6 text-center">AGM at Dubai Team Souvenir Africa</p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+     </div>
+  </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+  <div class="container mt-5">
+
+    <div class="row">
+      <div class="col-md-12 mx-auto">
+        <div class="h-100  text-dark rounded-3">
+          <h2 class="fontPT text-center">Want to work with us?</h2>
+          <p class="para text-center">Divide details about your product or agency work into parts. Write a few lines about each one <br> and contact us about any further collaboration. We will get back to you in a couple of days.</p>
+
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</body>
+
+
+<footer  style=" background:rgba(81, 82, 82, 0.46);color:#fff" class="container-fluid text-center text-md-start mt-5">
+  <!-- Section: Social media -->
+  <section
+    class="d-flex justify-content-center justify-content-md-center">
+
+    <div>
+      <a href="" class="me-4 text-reset">
+
+        <img src="{% static 'fb.png' %}" alt=" fb png img">
+      </a>
+      <a href="" class="me-4 text-reset">
+
+        <img src="{% static 'tw.png' %}" alt="">
+      </a>
+      <a href="" class="me-4 text-reset">
+
+        <img src="{% static 'g+.png' %}" alt="">
+      </a>
+      <a href="" style="font-size: 1.8rem;" class="me-4 text-reset">
+
+        <img src="{% static 'link.png' %}" alt="">
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- Section: Links  -->
+  <section class="fontSt">
+    <div style="font-size: 14px;" class="container text-center text-md-start mt-5">
+
+      <div class="row mt-3">
+
+        <div class="col-md-4">
+
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i  style="font-size: 29px;" class="fas fa-gem me-3">&nbsp;&nbsp;&nbsp;</i>Need Help with Anything
+          </h6>
+          <p>
+            Lets here all about us! <span>Contact Us</span>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+
+        <div class="col-md-4">
+
+          <p>
+            <a href="#!" class="text-reset text-decoration-none text-white">About Us</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none text-white">Media</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none text-white">Privacy Policy</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none text-white">Return and Refund Policy</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none text-white">Terms of use</a>
+          </p>
+        </div>
+
+        <!-- Grid column -->
+        <div class="col-md-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Sign up to our NewsSeller
+          </h6>
+          <form action="" class="">
+          <div class="mb-3">
+            <!-- <label for="exampleInputEmail1" class="form-label">Email address</label> -->
+            <input type="email" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your email address">
+            <button type="submit" class="btn btn-outline-secondary mt-2">Submit</button>
+
+
+          </div>
+          </form>
+
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+
+    </div>
+  </section>
+
+
+
+</footer>
+</html>

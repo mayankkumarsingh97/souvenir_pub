@@ -1,0 +1,187 @@
+.subscribe-area {
+    /*background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);*/
+    }
+
+    .subscribe-text span {
+        font-size: 12px;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: 5px;
+    }
+    .subscribe-text h2 {
+        color: #fff;
+        font-size: 22px;
+        font-weight: 300;
+        margin-bottom: 0;
+        margin-top: 6px;
+    }
+    .subscribe-wrapper {
+        overflow: hidden;
+    }
+    .mb-15 {
+        margin-bottom: 15px;
+    }
+    .subscribe-form {
+    }
+    .subscribe2-wrapper .subscribe-form input {
+        background: none;
+        border: 1px solid #fff;
+        border-radius: 30px;
+        color: #000;
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 300;
+        height: 37px;
+        margin-right: -114px;
+        padding-left: 35px;
+        width: 50%;
+        cursor: pointer;
+        border:2px solid green;
+    }
+
+    .subscribe2-wrapper .subscribe-form button {
+        background: #ffff;
+        border: 2px solid green;
+        border-radius: 30px;
+        color: #4b5d73;
+        display: inline-block;
+        /* font-size: 18px; */
+        font-weight: 400;
+        line-height: 1;
+        padding: 9px 30px;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+    }
+    .subscribe2-wrapper .subscribe-form button i {
+        font-size: 18px;
+        padding-left: 5px;
+    }
+
+
+          body{
+            /* background-color: #eee; */
+            /* background-color: rgb(245, 236, 245); */
+          }
+          .fontSt{
+
+            font-family: 'Indie Flower', cursive;
+            font-size: 1.6rem;
+            font-weight: 400;
+
+          }
+          /* .bd{
+
+                background: linear-gradient(180deg,lightblue,#fff)
+            } */
+            .myimg{
+              margin-top: -147px;
+        position: relative;
+            }
+          .borderR{
+            border-radius: 1.4rem;
+          }
+          .flat {
+          float: right!important;
+          position: relative;
+          bottom: 132px;
+          left: 145px;
+          width: 257px;
+       }
+       @font-face {
+      font-family: Playtime;
+      src: url(Playtime.otf);
+
+    }
+
+          .fontPT{
+            font-family: Playtime;
+            font-size: 3.6rem;
+
+          }
+          @media screen  and (max-width:768px) {
+            .fontPT{
+            font-family: Playtime;
+            font-size: 2.6rem;
+
+          }
+          .myimg {
+        margin-top: -19px;
+        position: relative;
+    }
+    .subscribe2-wrapper .subscribe-form input{
+      margin-right: -44px;
+    }
+          }
+
+          .bg{
+            background-color: #eee;
+          }
+          .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+          }
+
+          .para{
+            font-family: 'Graffiare', sans-serif;
+            font-weight: 500;
+
+          }
+          @media (max-width:575px) {
+            .fontPT{
+              font-size: 2.2rem;
+            }
+            .h2{
+              font-size: 2.4rem;
+                position: relative;
+                top: -20px;
+                left: 47px;
+            }
+          }
+          @media (max-width: 768px) and (min-width:480px){
+            .bd-placeholder-img-lg {
+              font-size: 3.7rem;
+            }
+            .h2{
+              font-size: 2.1rem;
+                position: relative;
+                top: -20px;
+                left: 47px;
+            }
+          }
+    .h2{
+      font-size: 5.1rem;
+        position: relative;
+        top: -20px;
+        left: 47px;
+    }
+
+
+    /* 5.1rem heading class */
+   .hd5{
+     font-size: 5.1rem;
+   }
+
+
+   @media screen and (max-width:480px) {
+    .hd5{
+      font-size: 3.1rem;
+    }
+
+   }
+
+   @media screen and (min-width:481px) and (max-width:768px) {
+    .hd5{
+      font-size: 4.1rem;
+    }
+   }
+
+.card_rule{
+  font-size: 10px;
+    font-weight: 900;
+}
+.card-bRad{
+  border-radius: 24px !important;
+}
